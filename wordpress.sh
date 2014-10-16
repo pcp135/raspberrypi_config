@@ -13,7 +13,7 @@ E_BADARGS=65
 MYSQL=`which mysql`
  
 Q1="CREATE DATABASE IF NOT EXISTS wordpress;"
-Q2="GRANT ALL ON *.* TO '$1'@'localhost' IDENTIFIED BY '$2';"
+Q2="GRANT ALL ON *.wordpress TO '$1'@'localhost' IDENTIFIED BY '$2';"
 Q3="FLUSH PRIVILEGES;"
 SQL="${Q1}${Q2}${Q3}"
  
@@ -22,5 +22,6 @@ then
   echo "Usage: $0 dbuser dbpass"
   exit $E_BADARGS
 fi
- 
+
+echo "Enter the password for the DB admin to create the database" 
 $MYSQL -uroot -p -e "$SQL"
