@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ ! -f $HOME/raspberrypi_config/ ]; then
+if [ ! -d $HOME/raspberrypi_config ]; then
 	cd $HOME
 	git clone https://github.com/pcp135/raspberrypi_config.git
 	ln -sb raspberrypi_config/.screenrc $HOME
