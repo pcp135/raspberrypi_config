@@ -6,6 +6,10 @@ if [ ! -d $HOME/raspberrypi_config ]; then
 	ln -sb raspberrypi_config/.screenrc $HOME
 fi
 
+#Install apps
+sudo apt-get install php5 libapache2-mod-php5 -y
+sudo apt-get install mysql-server php5-mysql -y
+
 #Identify with github
 git config --global user.name "Phil Parsons"
 git config --global user.email phil@parsons.uk.com

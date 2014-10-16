@@ -8,3 +8,10 @@ sudo dd bs=1m if=XXX.img of=/dev/diskXX
 
 Copy SSH key to server
 cat ~/.ssh/id_rsa.pub | ssh phil@raspberrypi 'cat >> .ssh/authorized_keys'
+
+
+Force key login only
+sudo emacs /etc/ssh/sshd_config
+PasswordAuthentication no
+
+sudo service ssh restart
