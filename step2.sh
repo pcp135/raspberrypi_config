@@ -17,7 +17,6 @@ fi
 sudo apt-get install screen -y
 sudo apt-get install emacs -y
 sudo apt-get install apache2 -y
-sudo apt-get install mysql -y
 
 #Switch to Phil
 su phil
