@@ -13,7 +13,7 @@ E_BADARGS=65
 MYSQL=`which mysql`
  
 Q1="CREATE DATABASE IF NOT EXISTS wordpress;"
-Q2="GRANT ALL ON *.wordpress TO '$1'@'localhost' IDENTIFIED BY '$2';"
+Q2="GRANT ALL ON wordpress.* TO '$1'@'localhost' IDENTIFIED BY '$2';"
 Q3="FLUSH PRIVILEGES;"
 SQL="${Q1}${Q2}${Q3}"
  
