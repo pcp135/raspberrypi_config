@@ -16,3 +16,7 @@ sudo apt-get install screen -y
 sudo apt-get install emacs -y
 sudo apt-get install apache2 -y
 sudo apt-get install mysql -y
+
+su phil
+git clone https://github.com/pcp135/raspberrypi_config.git
+ln -sb raspberrypi_config/.screenrc .
