@@ -25,3 +25,9 @@ ln -sb raspberrypi_config/.screenrc .
 #Identify with github
 git config --global user.name "Phil Parsons"
 git config --global user.email phil@parsons.uk.com
+
+# Generate new key with no passphrase
+ssh-keygen -t rsa -f ~/.ssh/id_rsa -N ''
+
+# Output rsa key to screen for copying into git
+cat ~/.ssh/id_rsa.pub
