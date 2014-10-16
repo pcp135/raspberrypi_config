@@ -17,6 +17,11 @@ sudo apt-get install emacs -y
 sudo apt-get install apache2 -y
 sudo apt-get install mysql -y
 
+#Switch to Phil and link in dotfiles
 su phil
 git clone https://github.com/pcp135/raspberrypi_config.git
 ln -sb raspberrypi_config/.screenrc .
+
+#Identify with github
+git config --global user.name "Phil Parsons"
+git config --global user.email phil@parsons.uk.com
