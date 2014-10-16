@@ -1,0 +1,10 @@
+With disk mounted adding an image to an SD card
+
+sudo diskutil partitionDisk /dev/diskXX 1 MBR "Free Space" %noformat% 100%
+sudo dd bs=1m if=XXX.img of=/dev/diskXX
+
+
+
+
+Copy SSH key to server
+cat ~/.ssh/id_rsa.pub | ssh phil@raspberrypi 'cat >> .ssh/authorized_keys'
