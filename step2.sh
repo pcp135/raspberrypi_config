@@ -10,7 +10,7 @@ sudo adduser phil pi
 sudo adduser phil sudo
 if [ ! -f /home/phil/authorized_keys ]; then
 	sudo mkdir /home/phil/.ssh
-	sudo touch /home/phil/authorized_keys
+	sudo touch /home/phil/.ssh/authorized_keys
 fi
 
 # Install apps
