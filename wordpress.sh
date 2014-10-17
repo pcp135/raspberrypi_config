@@ -10,6 +10,7 @@ then
   exit $E_BADARGS
 fi
 
+cp $HOME/raspberrypi_config/.htaccess /var/www/
 cd /var/www
 sudo chown phil: .
 sudo rm -r *
@@ -18,7 +19,7 @@ tar xzf latest.tar.gz
 mv wordpress/* .
 rm -rf wordpress latest.tar.gz
 sudo chown -R www-data:www-data *
- 
+
 Q1="CREATE DATABASE IF NOT EXISTS wordpress;"
 Q2="GRANT ALL ON wordpress.* TO '$1'@'localhost' IDENTIFIED BY '$2';"
 Q3="FLUSH PRIVILEGES;"

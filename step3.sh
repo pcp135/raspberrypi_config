@@ -3,7 +3,7 @@
 if [ ! -d $HOME/raspberrypi_config ]; then
 	cd $HOME
 	git clone https://github.com/pcp135/raspberrypi_config.git
-	ln -sb raspberrypi_config/.screenrc $HOME
+	ln -sb $HOME/raspberrypi_config/.screenrc $HOME
 fi
 
 #Identify with github
