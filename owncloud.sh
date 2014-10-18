@@ -1,5 +1,15 @@
 #!/bin/bash
 
+EXPECTED_ARGS=2
+E_BADARGS=65
+MYSQL=`which mysql`
+
+if [ $# -ne $EXPECTED_ARGS ]
+then
+  echo "Usage: $0 dbuser dbpass"
+  exit $E_BADARGS
+fi
+
 cd /var/www/
 if [ ! -f owncloud-7.0.2.tar.bz2 ]; then
 	wget https://download.owncloud.org/community/owncloud-7.0.2.tar.bz2
@@ -33,3 +43,13 @@ sudo chown -R www-data:www-data owncloud/apps
 sudo mkdir /mnt/owncloud-data
 sudo chown -R www-data:www-data /mnt/owncloud-data
 sudo chmod -R 770 /mnt/owncloud-data
+
+Q1="CREATE DATABASE IF NOT EXISTS wordpress;"
+Q2="GRANT ALL ON owncloud.* TO '$1'@'localhost' IDENTIFIED BY '$2';"
+Q3="FLUSH PRIVILEGES;"
+SQL="${Q1}${Q2}${Q3}"
+ 
+echo "Enter the password for the DB admin to create the database" 
+$MYSQL -uroot -p -e "$SQL"
+
+echo "Now visit the website to finish the setup"
