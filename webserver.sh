@@ -8,7 +8,7 @@ sudo lighty-enable-mod fastcgi-php
 sudo service lighttpd force-reload
 
 #Set permissions on the web path
-cp $HOME/raspberrypi_config/.htaccess /var/www/
+sudo cp $HOME/raspberrypi_config/.htaccess /var/www/
 cd /var/www
 sudo chown phil: .
 sudo rm -r *
