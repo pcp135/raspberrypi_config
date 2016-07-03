@@ -19,10 +19,10 @@ fi
 # Install apps
 sudo apt-get install screen -y
 sudo apt-get install emacs -y
-sudo apt-get install lightppd -y
+sudo apt-get install lighttpd -y
 sudo apt-get install php5-common php5-cgi php5 -y
 sudo apt-get install mysql-server php5-mysql -y
-sudo light-enable-mod fastcgi-php
+sudo lighty-enable-mod fastcgi-php
 sudo service lighttpd force-reload
 sudo apt-get install python-pip -y
 
