@@ -24,6 +24,7 @@ sudo apt-get install php5-common php5-cgi php5 -y
 sudo apt-get install mysql-server php5-mysql -y
 sudo light-enable-mod fastcgi-php
 sudo service lighttpd force-reload
+sudo apt-get install python-pip -y
 
 #Switch to Phil
 su phil
