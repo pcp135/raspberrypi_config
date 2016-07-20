@@ -12,11 +12,11 @@ fi
 
 cd /var/www/
 if [ ! -f owncloud-8.0.4.tar.bz2 ]; then
-	wget https://download.owncloud.org/community/owncloud-9.0.4.tar.bz2
+	sudo wget https://download.owncloud.org/community/owncloud-9.0.4.tar.bz2
 fi
-wget https://download.owncloud.org/community/owncloud-9.0.4.tar.bz2.md5
-wget https://download.owncloud.org/community/owncloud-9.0.4.tar.bz2.asc
-wget https://owncloud.org/owncloud.asc
+sudo wget https://download.owncloud.org/community/owncloud-9.0.4.tar.bz2.md5
+sudo wget https://download.owncloud.org/community/owncloud-9.0.4.tar.bz2.asc
+sudo wget https://owncloud.org/owncloud.asc
 file1=`cut -d" " -f1 owncloud-9.0.4.tar.bz2.md5`
 file2=`md5sum owncloud-9.0.4.tar.bz2 | cut -d" " -f1`
 
@@ -32,9 +32,9 @@ echo "GPG verification output"
 gpg --import owncloud.asc
 gpg --verify owncloud-9.0.4.tar.bz2.asc owncloud-9.0.4.tar.bz2
 
-tar -xjf owncloud-9.0.4.tar.bz2
-rm owncloud-9.0.4.tar.bz*
-rm owncloud.as*
+sudo tar -xjf owncloud-9.0.4.tar.bz2
+sudo rm owncloud-9.0.4.tar.bz*
+sudo rm owncloud.as*
 
 sudo apt-get install php5-gd -y
 sudo chown www-data:www-data owncloud
