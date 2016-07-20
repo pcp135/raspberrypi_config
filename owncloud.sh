@@ -30,7 +30,7 @@ fi
 
 echo "GPG verification output"
 gpg --import owncloud.asc
-gpg --verify owncloud-9.0.4.tar.bz2.asc owncloud-8.0.4.tar.bz2
+gpg --verify owncloud-9.0.4.tar.bz2.asc owncloud-9.0.4.tar.bz2
 
 tar -xjf owncloud-9.0.4.tar.bz2
 rm owncloud-9.0.4.tar.bz*
