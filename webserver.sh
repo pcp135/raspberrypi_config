@@ -2,8 +2,8 @@
 
 # Install webserver
 sudo apt-get install lighttpd -y
-sudo apt-get install php5-common php5-cgi php5 -y
-sudo apt-get install mysql-server php5-mysql -y
+sudo apt-get install php7-common php7-cgi php7 -y
+sudo apt-get install mysql-server php7-mysql -y
 sudo lighty-enable-mod fastcgi-php
 sudo service lighttpd force-reload
 
